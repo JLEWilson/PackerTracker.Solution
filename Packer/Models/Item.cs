@@ -10,7 +10,7 @@ namespace Packer.Models
       public bool Packed { get; set; }
       public int Price { get; set; }
       public string Source { get; set; }
-
+      private static List<Item> _itemList = new List<Item> { };
       public Item(string name, bool purchased, bool packed, int price, string source)
       {
         Name = name;
@@ -18,8 +18,18 @@ namespace Packer.Models
         Packed = packed;
         Price = price;
         Source = source;
+        _itemList.Add(this);
       }
 
+      public static List<Item> GetAll()
+      {
+        return _itemList;
+      }
+
+      public static void ClearAll()
+      {
+        _itemList.Clear();
+      }
     }
 }
 
