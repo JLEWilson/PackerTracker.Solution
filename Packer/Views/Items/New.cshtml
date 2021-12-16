@@ -1,0 +1,19 @@
+
+<form action="/items" method="post">
+  <label for="name">Item name: </label>
+  <input id="name" name="name" type="text">
+  <br>
+  <label for="purchased">Is it already purchased?</label>
+  <input id="purchased" name="purchased" value="true" type="checkbox">
+  <br>
+  <label for="packed">Is it already packed?</label>
+  <input id="packed" name="packed" value="true" type="checkbox">
+  <br>
+  <label for="price">Price of item: </label>
+  <input id="price" name="price" type="number" min="0">
+  <br>
+  <label for="source">Where do we get the item?</label>
+  <input id="source" name="source" type="text">
+  <br>
+  <button type="submit">Submit</button>
+</form>
