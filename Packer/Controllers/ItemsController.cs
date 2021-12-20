@@ -24,6 +24,7 @@ namespace Packer.Controllers
     public ActionResult Create(string name, int price, string source, bool purchased = false, bool packed = false)
     {
       Item newItem = new Item(name, purchased, packed, price, source);
+      newItem.Save();
       return RedirectToAction("Index");
     }
 
